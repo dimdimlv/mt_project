@@ -22,5 +22,7 @@
       }
     }
   ],
-  "output_dir": "results/SP_Oracle/"
+  "output_dir": "results/SP_Oracle_Scenario2/",
+  "fixed_conversion_rate": 0.1,
+  "fixed_sales_revenue_per_conversion": 100.0
 }
