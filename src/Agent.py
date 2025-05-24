@@ -126,5 +126,42 @@ class Agent:
             self.logs = []
         else:
             self.logs = self.logs[-self.memory:]
-        self.bidder.clear_logs(memory=self.memory)
+        # Ensure bidder's clear_logs is also called, as it might have its own memory management.
+        # This was missing in the original provided Agent.py but is good practice if Bidder has logs.
+        if hasattr(self.bidder, 'clear_logs'):
+            self.bidder.clear_logs(memory=self.memory)
 
+    def get_total_clicks(self) -> int:
+        """Returns the total number of clicks the agent received for impressions they won."""
+        return sum(1 for opp in self.logs if opp.won and opp.outcome)
+
+    def get_total_conversions(self) -> int:
+        """Returns the total number of conversions the agent achieved for impressions they won."""
+        return sum(1 for opp in self.logs if opp.won and opp.conversion)
+
+    def get_total_sales_revenue(self) -> float:
+        """Returns the total sales revenue generated from conversions for impressions they won."""
+        # Ensure sales_revenue is treated as float, np.float32 should sum correctly.
+        return sum(float(opp.sales_revenue) for opp in self.logs if opp.won and opp.conversion)
+
+    def get_total_spend(self) -> float:
+        """Returns the total amount spent by the agent on winning bids."""
+        # Ensure price is treated as float, np.float32 should sum correctly.
+        return sum(float(opp.price) for opp in self.logs if opp.won)
+
+    def get_CVR(self) -> float:
+        """Calculates the Conversion Rate (Total Conversions / Total Clicks)."""
+        total_clicks = self.get_total_clicks()
+        if total_clicks == 0:
+            return 0.0
+        total_conversions = self.get_total_conversions()
+        return total_conversions / total_clicks
+
+    def get_ACoS(self) -> float:
+        """Calculates the Advertising Cost of Sales (Total Spend / Total Sales Revenue)."""
+        total_spend = self.get_total_spend()
+        total_sales_revenue = self.get_total_sales_revenue()
+        if total_sales_revenue == 0:
+            return 0.0 if total_spend == 0 else np.inf
+        return total_spend / total_sales_revenue
+        self.bidder.clear_logs(memory=self.memory)
