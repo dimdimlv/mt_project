@@ -41,7 +41,10 @@ def parse_config(path):
     embedding_var = config['embedding_var']
     obs_embedding_size = config['obs_embedding_size']
 
-    # Expand agent-config if there are multiple copies
+    # New auction-level parameters for conversion simulation
+    fixed_cvr = config.get('fixed_conversion_rate', 0.0)  # Default to 0 if not specified
+    fixed_sales_revenue_per_conversion = config.get('fixed_sales_revenue_per_conversion', 0.0) # Default to 0
+
     agent_configs = []
     num_agents = 0
     for agent_config in config['agents']:
@@ -71,7 +74,7 @@ def parse_config(path):
     for agent, items in agents2items.items():
         agents2items[agent] = np.hstack((items, - 3.0 - 1.0 * rng.random((items.shape[0], 1))))
 
-    return rng, config, agent_configs, agents2items, agents2item_values, num_runs, max_slots, embedding_size, embedding_var, obs_embedding_size
+    return rng, config, agent_configs, agents2items, agents2item_values, num_runs, max_slots, embedding_size, embedding_var, obs_embedding_size, fixed_cvr, fixed_sales_revenue_per_conversion
 
 
 def instantiate_agents(rng, agent_configs, agents2item_values, agents2items):
@@ -95,7 +98,8 @@ def instantiate_agents(rng, agent_configs, agents2item_values, agents2items):
     return agents
 
 
-def instantiate_auction(rng, config, agents2items, agents2item_values, agents, max_slots, embedding_size, embedding_var, obs_embedding_size):
+def instantiate_auction(rng, config, agents2items, agents2item_values, agents, max_slots, 
+                        embedding_size, embedding_var, obs_embedding_size, fixed_cvr, fixed_sales_revenue_per_conversion):
     return (Auction(rng,
                     eval(f"{config['allocation']}()"),
                     agents,
@@ -105,7 +109,9 @@ def instantiate_auction(rng, config, agents2items, agents2item_values, agents, m
                     embedding_size,
                     embedding_var,
                     obs_embedding_size,
-                    config['num_participants_per_round']),
+                    config['num_participants_per_round'],
+                    fixed_cvr,
+                    fixed_sales_revenue_per_conversion),
             config['num_iter'], config['rounds_per_iter'], config['output_dir'])
 
 
@@ -139,6 +145,14 @@ def simulation_run():
             agent2CTR_RMSE[agent.name].append(agent.get_CTR_RMSE())
             agent2CTR_bias[agent.name].append(agent.get_CTR_bias())
 
+            # Collect new CVR and ACoS related metrics
+            agent2total_clicks[agent.name].append(agent.get_total_clicks())
+            agent2total_conversions[agent.name].append(agent.get_total_conversions())
+            agent2total_sales_revenue[agent.name].append(agent.get_total_sales_revenue())
+            agent2total_spend[agent.name].append(agent.get_total_spend())
+            agent2CVR[agent.name].append(agent.get_CVR())
+            agent2ACoS[agent.name].append(agent.get_ACoS())
+
             if isinstance(agent.bidder, PolicyLearningBidder) or isinstance(agent.bidder, DoublyRobustBidder):
                 agent2gamma[agent.name].append(torch.mean(torch.Tensor(agent.bidder.gammas)).detach().item())
             elif not agent.bidder.truthful:
@@ -161,7 +175,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Parse configuration file
-    rng, config, agent_configs, agents2items, agents2item_values, num_runs, max_slots, embedding_size, embedding_var, obs_embedding_size = parse_config(args.config)
+    rng, config, agent_configs, agents2items, agents2item_values, num_runs, max_slots, \
+    embedding_size, embedding_var, obs_embedding_size, fixed_cvr, fixed_sales_revenue_per_conversion = parse_config(args.config)
 
     # Plotting config
     FIGSIZE = (8, 5)
@@ -180,13 +195,26 @@ if __name__ == '__main__':
     run2agent2CTR_bias = {}
     run2agent2gamma = {}
 
+    # New metrics placeholders over all runs
+    run2agent2total_clicks = {}
+    run2agent2total_conversions = {}
+    run2agent2total_sales_revenue = {}
+    run2agent2total_spend = {}
+    run2agent2CVR = {}
+    run2agent2ACoS = {}
+
     run2auction_revenue = {}
 
     # Repeated runs
     for run in range(num_runs):
         # Reinstantiate agents and auction per run
         agents = instantiate_agents(rng, agent_configs, agents2item_values, agents2items)
-        auction, num_iter, rounds_per_iter, output_dir = instantiate_auction(rng, config, agents2items, agents2item_values, agents, max_slots, embedding_size, embedding_var, obs_embedding_size)
+        auction, num_iter, rounds_per_iter, output_dir = instantiate_auction(
+            rng, config, agents2items, agents2item_values, agents, 
+            max_slots, embedding_size, embedding_var, obs_embedding_size,
+            fixed_cvr, fixed_sales_revenue_per_conversion
+        )
+
 
         # Placeholders for summary statistics per run
         agent2net_utility = defaultdict(list)
@@ -200,6 +228,14 @@ if __name__ == '__main__':
         agent2CTR_RMSE = defaultdict(list)
         agent2CTR_bias = defaultdict(list)
         agent2gamma = defaultdict(list)
+        
+        # New metrics placeholders per run
+        agent2total_clicks = defaultdict(list)
+        agent2total_conversions = defaultdict(list)
+        agent2total_sales_revenue = defaultdict(list)
+        agent2total_spend = defaultdict(list)
+        agent2CVR = defaultdict(list)
+        agent2ACoS = defaultdict(list)
 
         auction_revenue = []
 
@@ -218,6 +254,14 @@ if __name__ == '__main__':
         run2agent2CTR_RMSE[run] = agent2CTR_RMSE
         run2agent2CTR_bias[run] = agent2CTR_bias
         run2agent2gamma[run] = agent2gamma
+
+        # Store new metrics
+        run2agent2total_clicks[run] = agent2total_clicks
+        run2agent2total_conversions[run] = agent2total_conversions
+        run2agent2total_sales_revenue[run] = agent2total_sales_revenue
+        run2agent2total_spend[run] = agent2total_spend
+        run2agent2CVR[run] = agent2CVR
+        run2agent2ACoS[run] = agent2ACoS
 
         run2auction_revenue[run] = auction_revenue
 
@@ -292,6 +336,26 @@ if __name__ == '__main__':
     plot_measure_per_agent(run2agent2CTR_bias, 'CTR Bias', optimal=1.0) #, yrange=(.5, 5.0))
 
     shading_factor_df = plot_measure_per_agent(run2agent2gamma, 'Shading Factors')
+
+    # Plot and save CVR
+    cvr_df = plot_measure_per_agent(run2agent2CVR, 'CVR', yrange=(0, 1) if fixed_cvr > 0 else None) # Adjust yrange if CVR is expected to be within [0,1]
+    cvr_df.to_csv(f'{output_dir}/cvr_{rounds_per_iter}_rounds_{num_iter}_iters_{num_runs}_runs_{obs_embedding_size}_emb_of_{embedding_size}.csv', index=False)
+
+    # Plot and save ACoS
+    # ACoS can be np.inf, which might affect plotting. Consider log_y or specific yrange.
+    acos_df = plot_measure_per_agent(run2agent2ACoS, 'ACoS', log_y=True) # Using log_y for ACoS as it can vary widely or be inf
+    acos_df.to_csv(f'{output_dir}/acos_{rounds_per_iter}_rounds_{num_iter}_iters_{num_runs}_runs_{obs_embedding_size}_emb_of_{embedding_size}.csv', index=False)
+
+    # Optionally, save the component metrics (total clicks, conversions, revenue, spend) to CSVs
+    # This can be useful for more detailed analysis.
+    for data_dict, name in [
+        (run2agent2total_clicks, "Total Clicks"),
+        (run2agent2total_conversions, "Total Conversions"),
+        (run2agent2total_sales_revenue, "Total Sales Revenue"),
+        (run2agent2total_spend, "Total Spend")
+    ]:
+        df = measure_per_agent2df(data_dict, name)
+        df.to_csv(f'{output_dir}/{name.lower().replace(" ", "_")}_{rounds_per_iter}_rounds_{num_iter}_iters_{num_runs}_runs_{obs_embedding_size}_emb_of_{embedding_size}.csv', index=False)
 
     def measure2df(run2measure, measure_name):
         df_rows = {'Run': [], 'Iteration': [], measure_name: []}
