@@ -164,4 +164,3 @@ class Agent:
         if total_sales_revenue == 0:
             return 0.0 if total_spend == 0 else np.inf
         return total_spend / total_sales_revenue
-        self.bidder.clear_logs(memory=self.memory)

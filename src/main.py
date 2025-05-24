@@ -287,15 +287,24 @@ if __name__ == '__main__':
         else:
             df = run2agent2measure
 
+        # If plotting ACoS, convert to percentage for display
+        plot_measure_name = measure_name
+        if measure_name == 'ACoS':
+            df[measure_name] = df[measure_name] * 100
+            plot_measure_name = 'ACoS (%)'
+
+
         fig, axes = plt.subplots(figsize=FIGSIZE)
-        plt.title(f'{measure_name} Over Time', fontsize=FONTSIZE + 2)
+        plt.title(f'{plot_measure_name} Over Time', fontsize=FONTSIZE + 2)
         min_measure, max_measure = 0.0, 0.0
-        sns.lineplot(data=df, x="Iteration", y=measure_name, hue="Agent", ax=axes)
+        sns.lineplot(data=df, x="Iteration", y=measure_name, hue="Agent", ax=axes) # Use original measure_name for y-axis data mapping
         plt.xticks(fontsize=FONTSIZE - 2)
-        plt.ylabel(f'{measure_name}', fontsize=FONTSIZE)
+        plt.ylabel(f'{plot_measure_name}', fontsize=FONTSIZE) # Use plot_measure_name for y-axis label
         if optimal is not None:
-            plt.axhline(optimal, ls='--', color='gray', label='Optimal')
-            min_measure = min(min_measure, optimal)
+            # Adjust optimal if ACoS is being plotted as percentage
+            plot_optimal = optimal * 100 if measure_name == 'ACoS' else optimal
+            plt.axhline(plot_optimal, ls='--', color='gray', label='Optimal')
+            min_measure = min(min_measure, plot_optimal)
         if log_y:
             plt.yscale('log')
         if yrange is None:
@@ -343,8 +352,11 @@ if __name__ == '__main__':
 
     # Plot and save ACoS
     # ACoS can be np.inf, which might affect plotting. Consider log_y or specific yrange.
-    acos_df = plot_measure_per_agent(run2agent2ACoS, 'ACoS', log_y=True) # Using log_y for ACoS as it can vary widely or be inf
-    acos_df.to_csv(f'{output_dir}/acos_{rounds_per_iter}_rounds_{num_iter}_iters_{num_runs}_runs_{obs_embedding_size}_emb_of_{embedding_size}.csv', index=False)
+    # ACoS will be plotted as a percentage.
+    acos_df = plot_measure_per_agent(run2agent2ACoS, 'ACoS', log_y=False) # Using log_y for ACoS as it can vary widely or be inf. Disabled log_y for percentage.
+    # The acos_df still contains ACoS as a ratio, which is correct for CSV.
+    acos_df_to_save = measure_per_agent2df(run2agent2ACoS, 'ACoS') # Re-generate or use original before modification for saving
+    acos_df_to_save.to_csv(f'{output_dir}/acos_{rounds_per_iter}_rounds_{num_iter}_iters_{num_runs}_runs_{obs_embedding_size}_emb_of_{embedding_size}.csv', index=False)
 
     # Optionally, save the component metrics (total clicks, conversions, revenue, spend) to CSVs
     # This can be useful for more detailed analysis.
