@@ -1,10 +1,15 @@
 import numpy as np
 from dataclasses import dataclass, field
 
-@dataclass
-class ImpressionOpportunity:
-    __slots__ = ['context', 'item', 'value', 'bid', 'best_expected_value', 'true_CTR', 'estimated_CTR', 'price', 'second_price', 'winning_bid', 'outcome', 'won', 'conversion', 'sales_revenue']
 
+class _ImpressionSlotsBase:
+    """Base class to define slots that are not dataclass fields."""
+    __slots__ = 'winning_bid', # 'winning_bid' was in __slots__ but not a typed field
+
+@dataclass(slots=True) # Let dataclass manage slots for its fields
+class ImpressionOpportunity(_ImpressionSlotsBase):
+    # Manual __slots__ removed. Dataclass will generate slots for fields below
+    # and inherit 'winning_bid' from _ImpressionSlotsBase.
     context: np.array
     item: np.uint32
     value: np.float32
@@ -14,6 +19,9 @@ class ImpressionOpportunity:
     estimated_CTR: np.float32
     price: np.float32
     second_price: np.float32
+    # If 'winning_bid' was intended as a dataclass field, it should be defined here with a type.
+    # e.g., winning_bid: np.float32 = field(default=0.0)
+    # Since it was only in __slots__ before, we keep it as an inherited slot for now.
     outcome: np.bool_
     won: np.bool_
     conversion: bool = field(default=False)
