@@ -1,0 +1,91 @@
+Run,Agent,Iteration,Total Clicks
+0,PPO Bidder - Penalty Wasted Spend 1,0,418
+0,PPO Bidder - Penalty Wasted Spend 1,1,876
+0,PPO Bidder - Penalty Wasted Spend 1,2,880
+0,PPO Bidder - Penalty Wasted Spend 1,3,843
+0,PPO Bidder - Penalty Wasted Spend 1,4,871
+0,Truthful Competitor 2,0,142
+0,Truthful Competitor 2,1,220
+0,Truthful Competitor 2,2,246
+0,Truthful Competitor 2,3,260
+0,Truthful Competitor 2,4,236
+0,Truthful Competitor 3,0,243
+0,Truthful Competitor 3,1,417
+0,Truthful Competitor 3,2,413
+0,Truthful Competitor 3,3,419
+0,Truthful Competitor 3,4,407
+0,Truthful Competitor 4,0,102
+0,Truthful Competitor 4,1,179
+0,Truthful Competitor 4,2,233
+0,Truthful Competitor 4,3,239
+0,Truthful Competitor 4,4,208
+0,Truthful Competitor 5,0,74
+0,Truthful Competitor 5,1,231
+0,Truthful Competitor 5,2,234
+0,Truthful Competitor 5,3,234
+0,Truthful Competitor 5,4,251
+0,Truthful Competitor 6,0,52
+0,Truthful Competitor 6,1,83
+0,Truthful Competitor 6,2,66
+0,Truthful Competitor 6,3,42
+0,Truthful Competitor 6,4,49
+1,PPO Bidder - Penalty Wasted Spend 1,0,305
+1,PPO Bidder - Penalty Wasted Spend 1,1,898
+1,PPO Bidder - Penalty Wasted Spend 1,2,928
+1,PPO Bidder - Penalty Wasted Spend 1,3,895
+1,PPO Bidder - Penalty Wasted Spend 1,4,827
+1,Truthful Competitor 2,0,36
+1,Truthful Competitor 2,1,342
+1,Truthful Competitor 2,2,294
+1,Truthful Competitor 2,3,298
+1,Truthful Competitor 2,4,291
+1,Truthful Competitor 3,0,97
+1,Truthful Competitor 3,1,362
+1,Truthful Competitor 3,2,431
+1,Truthful Competitor 3,3,401
+1,Truthful Competitor 3,4,449
+1,Truthful Competitor 4,0,16
+1,Truthful Competitor 4,1,46
+1,Truthful Competitor 4,2,157
+1,Truthful Competitor 4,3,185
+1,Truthful Competitor 4,4,166
+1,Truthful Competitor 5,0,112
+1,Truthful Competitor 5,1,222
+1,Truthful Competitor 5,2,221
+1,Truthful Competitor 5,3,242
+1,Truthful Competitor 5,4,235
+1,Truthful Competitor 6,0,167
+1,Truthful Competitor 6,1,53
+1,Truthful Competitor 6,2,60
+1,Truthful Competitor 6,3,66
+1,Truthful Competitor 6,4,59
+2,PPO Bidder - Penalty Wasted Spend 1,0,207
+2,PPO Bidder - Penalty Wasted Spend 1,1,898
+2,PPO Bidder - Penalty Wasted Spend 1,2,884
+2,PPO Bidder - Penalty Wasted Spend 1,3,864
+2,PPO Bidder - Penalty Wasted Spend 1,4,868
+2,Truthful Competitor 2,0,77
+2,Truthful Competitor 2,1,256
+2,Truthful Competitor 2,2,284
+2,Truthful Competitor 2,3,258
+2,Truthful Competitor 2,4,272
+2,Truthful Competitor 3,0,36
+2,Truthful Competitor 3,1,439
+2,Truthful Competitor 3,2,504
+2,Truthful Competitor 3,3,468
+2,Truthful Competitor 3,4,433
+2,Truthful Competitor 4,0,61
+2,Truthful Competitor 4,1,159
+2,Truthful Competitor 4,2,180
+2,Truthful Competitor 4,3,224
+2,Truthful Competitor 4,4,236
+2,Truthful Competitor 5,0,62
+2,Truthful Competitor 5,1,286
+2,Truthful Competitor 5,2,248
+2,Truthful Competitor 5,3,249
+2,Truthful Competitor 5,4,259
+2,Truthful Competitor 6,0,117
+2,Truthful Competitor 6,1,45
+2,Truthful Competitor 6,2,59
+2,Truthful Competitor 6,3,57
+2,Truthful Competitor 6,4,39

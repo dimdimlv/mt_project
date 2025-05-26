@@ -336,13 +336,14 @@ class ValueLearningBidder(Bidder):
 class PolicyLearningBidder(Bidder):
     """ A bidder that estimates the optimal bid shading distribution via policy learning """
 
-    def __init__(self, rng, gamma_sigma, loss, init_gamma=1.0):
+    def __init__(self, rng, gamma_sigma, loss, init_gamma=1.0, reward_function_type="net_utility"):
         self.gamma_sigma = gamma_sigma
         self.prev_gamma = init_gamma
         self.gammas = []
         self.propensities = []
         self.model = BidShadingContextualBandit(loss)
         self.model_initialised = False
+        self.reward_function_type = reward_function_type
         super(PolicyLearningBidder, self).__init__(rng)
 
     def bid(self, value, context, estimated_CTR):
@@ -367,10 +368,34 @@ class PolicyLearningBidder(Bidder):
         return bid
 
     def update(self, contexts, values, bids, prices, outcomes, estimated_CTRs, won_mask, iteration, plot, figsize, fontsize, name):
-        # Compute net utility
-        utilities = np.zeros_like(values)
-        utilities[won_mask] = (values[won_mask] * outcomes[won_mask]) - prices[won_mask]
-        utilities = torch.Tensor(utilities)
+        # Compute rewards based on reward function type
+        raw_rewards_np = np.zeros_like(values)
+        
+        if self.reward_function_type == "net_utility":
+            # Scenario 1: Net Utility = (VPC * click) - price_paid (if won)
+            raw_rewards_np[won_mask] = (values[won_mask] * outcomes[won_mask]) - prices[won_mask]
+        elif self.reward_function_type == "gross_utility":
+            # Scenario 2: Gross Utility = VPC * click (if won)
+            raw_rewards_np[won_mask] = values[won_mask] * outcomes[won_mask]
+        elif self.reward_function_type == "penalty_wasted_spend":
+            # Scenario 3: (VPC * click) - price_paid if click; -price_paid if no click (but won)
+            # Ensure 'outcomes' is boolean or 0/1 for correct indexing/logic
+            is_click = outcomes.astype(bool)
+            
+            # Calculate rewards for impressions with a click
+            clicked_rewards = (values * outcomes) - prices
+            
+            # Calculate penalties for impressions without a click (but won)
+            no_click_penalties = -prices
+            
+            # Combine based on whether a click occurred, for won impressions only
+            # Using np.where for conditional assignment
+            rewards_for_won_impressions = np.where(is_click, clicked_rewards, no_click_penalties)
+            raw_rewards_np[won_mask] = rewards_for_won_impressions[won_mask]
+        else:
+            raise ValueError(f"Unknown reward_function_type: {self.reward_function_type}")
+        
+        utilities = torch.Tensor(raw_rewards_np)
 
         # Extract shading factors to torch
         gammas = torch.Tensor(self.gammas)
@@ -389,8 +414,7 @@ class PolicyLearningBidder(Bidder):
         epochs = 8192 * 2
         lr = 2e-3
         optimizer = torch.optim.Adam(self.model.parameters(), lr=lr, weight_decay=1e-4, amsgrad=True)
-        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=100, min_lr=1e-8, factor=0.2, verbose=True)
-
+        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=100, min_lr=1e-8, factor=0.2)
         losses = []
         best_epoch, best_loss = -1, np.inf
         for epoch in tqdm(range(int(epochs)), desc=f'{name}'):

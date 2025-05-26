@@ -1,0 +1,79 @@
+================================================================================
+COMPREHENSIVE ANALYSIS OF REWARD FUNCTIONS IN AUCTIONSGYM
+================================================================================
+
+EXPERIMENT OVERVIEW:
+--------------------
+This analysis compares three reward function implementations:
+1. Net Utility: (VPC * click) - price_paid
+2. Gross Utility: VPC * click
+3. Penalty for Wasted Spend: reward if click, penalty if no click but won
+
+SUMMARY METRICS:
+--------------------
+
+Net Utility:
+  final_net_utility: 1101.7321
+  net_utility_learning_slope: 469.8928
+  final_gross_utility: 1371.5768
+  gross_utility_learning_slope: 0.9611
+  final_total_spend: 269.8447
+  total_spend_learning_slope: -468.9317
+  final_total_clicks: 808.6667
+  total_clicks_learning_slope: 0.5667
+  final_acos: 0.1683
+  acos_learning_slope: -0.2732
+  learning_curve_slope: 469.8928
+  convergence_iteration: 3
+  avg_overbid_regret: 0.0000
+  avg_underbid_regret: -398.0237
+  total_regret: -398.0237
+
+Gross Utility:
+  final_net_utility: 1175.6585
+  net_utility_learning_slope: 594.0226
+  final_gross_utility: 1557.5821
+  gross_utility_learning_slope: 176.6202
+  final_total_spend: 381.9236
+  total_spend_learning_slope: -417.4024
+  final_total_clicks: 918.3333
+  total_clicks_learning_slope: 104.1333
+  final_acos: 0.2182
+  acos_learning_slope: -0.6343
+  learning_curve_slope: 594.0226
+  convergence_iteration: 3
+  avg_overbid_regret: 0.0000
+  avg_underbid_regret: -439.4856
+  total_regret: -439.4856
+
+Penalty Wasted Spend:
+  final_net_utility: 1145.4354
+  net_utility_learning_slope: 435.2379
+  final_gross_utility: 1450.7280
+  gross_utility_learning_slope: 181.0300
+  final_total_spend: 305.2926
+  total_spend_learning_slope: -254.2078
+  final_total_clicks: 855.3333
+  total_clicks_learning_slope: 106.7333
+  final_acos: 0.1826
+  acos_learning_slope: -0.5388
+  learning_curve_slope: 435.2379
+  convergence_iteration: 3
+  avg_overbid_regret: 0.0000
+  avg_underbid_regret: -438.1021
+  total_regret: -438.1021
+
+KEY FINDINGS:
+--------------------
+1. Best Final Net Utility: Gross Utility (1175.6585)
+2. Fastest Convergence: Net Utility (3 iterations)
+3. Lowest Total Regret: Gross Utility (-439.4856)
+
+BEHAVIORAL INSIGHTS:
+--------------------
+• Net Utility: Balanced approach considering both revenue and costs
+• Gross Utility: More aggressive bidding, potentially higher spend
+• Penalty Wasted Spend: Conservative approach, focuses on click efficiency
+
+Report generated: 2025-05-26 07:20:27.925336
+================================================================================

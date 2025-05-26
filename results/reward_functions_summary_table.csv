@@ -1,0 +1,4 @@
+Reward Function,Final Net Utility,Final Gross Utility,Total Spend,Total Clicks,ACOS,Convergence Iteration,Total Regret
+Net Utility,1101.73,1371.58,269.84,809,0.17,3,-398.0237
+Gross Utility,1175.66,1557.58,381.92,918,0.22,3,-439.4856
+Penalty Wasted Spend,1145.44,1450.73,305.29,855,0.18,3,-438.1021

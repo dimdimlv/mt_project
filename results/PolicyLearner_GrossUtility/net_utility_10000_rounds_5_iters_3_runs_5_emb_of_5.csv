@@ -1,0 +1,91 @@
+Run,Agent,Iteration,Net Utility
+0,PPO Bidder - Gross Utility 1,0,-2274.972190277043
+0,PPO Bidder - Gross Utility 1,1,1236.0816634926134
+0,PPO Bidder - Gross Utility 1,2,1180.6283459814165
+0,PPO Bidder - Gross Utility 1,3,1172.6643739285823
+0,PPO Bidder - Gross Utility 1,4,1188.349400628953
+1,PPO Bidder - Gross Utility 1,0,-1637.7647734962372
+1,PPO Bidder - Gross Utility 1,1,1140.4092804374577
+1,PPO Bidder - Gross Utility 1,2,1250.653710472481
+1,PPO Bidder - Gross Utility 1,3,1197.117502431962
+1,PPO Bidder - Gross Utility 1,4,1106.9667538354283
+2,PPO Bidder - Gross Utility 1,0,-1459.0740189112785
+2,PPO Bidder - Gross Utility 1,1,1142.5455207452687
+2,PPO Bidder - Gross Utility 1,2,1185.0508694592422
+2,PPO Bidder - Gross Utility 1,3,1172.3597007808933
+2,PPO Bidder - Gross Utility 1,4,1231.659343115596
+0,Truthful Competitor 2,0,-515.670207597161
+0,Truthful Competitor 2,1,139.2708903602704
+0,Truthful Competitor 2,2,157.14179235781492
+0,Truthful Competitor 2,3,142.93023646091623
+0,Truthful Competitor 2,4,126.71134997190329
+1,Truthful Competitor 2,0,-284.92264237555764
+1,Truthful Competitor 2,1,78.55590514232556
+1,Truthful Competitor 2,2,123.88445927499396
+1,Truthful Competitor 2,3,156.5648284127216
+1,Truthful Competitor 2,4,153.3825356230117
+2,Truthful Competitor 2,0,-406.59843928071086
+2,Truthful Competitor 2,1,80.84944709998074
+2,Truthful Competitor 2,2,141.7132127181146
+2,Truthful Competitor 2,3,122.04626708264533
+2,Truthful Competitor 2,4,134.0165305799543
+0,Truthful Competitor 3,0,-286.64805695360724
+0,Truthful Competitor 3,1,269.06948503395904
+0,Truthful Competitor 3,2,236.19938610235755
+0,Truthful Competitor 3,3,256.92187495909405
+0,Truthful Competitor 3,4,251.9377577445094
+1,Truthful Competitor 3,0,-681.8830048853807
+1,Truthful Competitor 3,1,248.07422312265317
+1,Truthful Competitor 3,2,285.81590274161186
+1,Truthful Competitor 3,3,275.1673964334826
+1,Truthful Competitor 3,4,283.6522764007632
+2,Truthful Competitor 3,0,-182.72948544157993
+2,Truthful Competitor 3,1,247.73600496970892
+2,Truthful Competitor 3,2,308.11739788598976
+2,Truthful Competitor 3,3,256.45002988520025
+2,Truthful Competitor 3,4,243.59759513795157
+0,Truthful Competitor 4,0,-374.8656403364085
+0,Truthful Competitor 4,1,31.995270539866446
+0,Truthful Competitor 4,2,124.01013216073184
+0,Truthful Competitor 4,3,100.88026288722797
+0,Truthful Competitor 4,4,64.25571976488744
+1,Truthful Competitor 4,0,-760.9443013231165
+1,Truthful Competitor 4,1,76.40410721174001
+1,Truthful Competitor 4,2,90.22980800825827
+1,Truthful Competitor 4,3,97.16451339042416
+1,Truthful Competitor 4,4,86.54191861010399
+2,Truthful Competitor 4,0,-87.55182040760104
+2,Truthful Competitor 4,1,33.59717368426838
+2,Truthful Competitor 4,2,79.75349090358522
+2,Truthful Competitor 4,3,98.94642979347779
+2,Truthful Competitor 4,4,95.40952458815612
+0,Truthful Competitor 5,0,-1853.8304932721726
+0,Truthful Competitor 5,1,107.50779849800495
+0,Truthful Competitor 5,2,170.33922712099735
+0,Truthful Competitor 5,3,159.59416762596362
+0,Truthful Competitor 5,4,183.42513194313798
+1,Truthful Competitor 5,0,-1112.3077413683784
+1,Truthful Competitor 5,1,122.1892489075527
+1,Truthful Competitor 5,2,154.47680566990311
+1,Truthful Competitor 5,3,178.5192326020581
+1,Truthful Competitor 5,4,164.77053646156915
+2,Truthful Competitor 5,0,-653.5770562053544
+2,Truthful Competitor 5,1,115.78967321103737
+2,Truthful Competitor 5,2,146.9652868368649
+2,Truthful Competitor 5,3,173.75626765727387
+2,Truthful Competitor 5,4,163.55068399164426
+0,Truthful Competitor 6,0,-669.8072968207183
+0,Truthful Competitor 6,1,30.1340968733883
+0,Truthful Competitor 6,2,34.554644698258414
+0,Truthful Competitor 6,3,31.42688759172292
+0,Truthful Competitor 6,4,45.2424699345639
+1,Truthful Competitor 6,0,-731.840643404604
+1,Truthful Competitor 6,1,-51.689797536536105
+1,Truthful Competitor 6,2,40.47694867727486
+1,Truthful Competitor 6,3,30.804173833038217
+1,Truthful Competitor 6,4,31.81688763889162
+2,Truthful Competitor 6,0,-3868.63854390412
+2,Truthful Competitor 6,1,12.199447661217246
+2,Truthful Competitor 6,2,43.106866489813115
+2,Truthful Competitor 6,3,34.49934006854262
+2,Truthful Competitor 6,4,8.457018036184229

@@ -1,0 +1,46 @@
+{
+    "random_seed": 42, 
+    "num_runs": 3,
+    "num_iter": 5,
+    "rounds_per_iter": 10000,
+    "num_participants_per_round": 4,
+    "embedding_size": 5,
+    "embedding_var": 1.0,
+    "obs_embedding_size": 5,
+    "allocation": "SecondPrice",
+    "fixed_conversion_rate": 0.1,
+    "fixed_sales_revenue_per_conversion": 20.0,
+    "agents": [
+      {
+        "name": "PPO Bidder",
+        "num_copies": 1,
+        "num_items": 1,
+        "allocator": {
+          "type": "PyTorchLogisticRegressionAllocator",
+          "kwargs": {"embedding_size": 5, "num_items": 1}
+        },
+        "bidder": {
+            "type": "PolicyLearningBidder",
+            "kwargs": {
+              "gamma_sigma": 0.05,
+              "init_gamma": 0.9,
+              "loss": "'PPO'"
+            }
+        }
+      },
+      {
+        "name": "Truthful Competitor",
+        "num_copies": 5,
+        "num_items": 1,
+         "allocator": {
+          "type": "PyTorchLogisticRegressionAllocator",
+          "kwargs": {"embedding_size": 5, "num_items": 1}
+        },
+        "bidder": {
+          "type": "TruthfulBidder",
+          "kwargs": {}
+        }
+      }
+    ],
+    "output_dir": "results/Test01_5_5_10K/"
+  }
