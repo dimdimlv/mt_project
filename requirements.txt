@@ -3,6 +3,7 @@ cycler==0.12.1
 filelock==3.18.0
 fonttools==4.58.0
 fsspec==2025.5.1
+iniconfig==2.1.0
 Jinja2==3.1.6
 joblib==1.5.1
 kiwisolver==1.4.8
@@ -16,7 +17,9 @@ numpy==2.2.6
 packaging==25.0
 pandas==2.2.3
 pillow==11.2.1
+pluggy==1.6.0
 pyparsing==3.2.3
+pytest==8.3.5
 python-dateutil==2.9.0.post0
 pytz==2025.2
 scikit-learn==1.6.1
