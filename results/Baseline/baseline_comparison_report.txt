@@ -1,0 +1,580 @@
+================================================================================
+BASELINE COMPARISON ANALYSIS OF PPO REWARD FUNCTIONS
+================================================================================
+
+EXPERIMENT OVERVIEW:
+------------------------------
+This analysis compares PPO reward functions against truthful competitor baselines:
+• Net Utility (NU): (VPC * click) - price_paid
+• Gross Utility (GU): VPC * click
+• Penalty Wasted Spend (PWS): reward if click, penalty if no click
+
+Baselines: Truthful bidders (truth-telling strategy)
+Statistical Tests: t-test, Mann-Whitney U, Cohen's d effect size
+Significance Level: p < 0.05
+
+C5 CONFIGURATION RESULTS:
+----------------------------------------
+
+Baseline Performance Statistics:
+  net_utility:
+    mean: 1496.92
+    std: 857.30
+    median: 1464.13
+    count: 45
+
+  gross_utility:
+    mean: 2527.50
+    std: 1199.91
+    median: 2622.64
+    count: 45
+
+  total_spend:
+    mean: 1030.57
+    std: 361.44
+    median: 1117.05
+    count: 45
+
+  total_clicks:
+    mean: 2387.60
+    std: 1235.26
+    median: 2344.00
+    count: 45
+
+  cvr:
+    mean: 0.10
+    std: 0.01
+    median: 0.10
+    count: 45
+
+  total_sales_revenue:
+    mean: 4747.56
+    std: 2442.67
+    median: 4660.00
+    count: 45
+
+  underbid_regret:
+    mean: -2259.32
+    std: 350.10
+    median: -2185.16
+    count: 45
+
+Net Utility vs Baseline:
+  net_utility:
+    PPO: 11702.50 ± 230.10
+    Baseline: 1496.92 ± 857.30
+    Improvement: 681.8%
+    P-value: 0.0000
+    Effect size: 12.007
+    Significant: Yes
+
+  gross_utility:
+    PPO: 14484.67 ± 528.36
+    Baseline: 2527.50 ± 1199.91
+    Improvement: 473.1%
+    P-value: 0.0000
+    Effect size: 10.011
+    Significant: Yes
+
+  total_spend:
+    PPO: 2782.16 ± 299.91
+    Baseline: 1030.57 ± 361.44
+    Improvement: 170.0%
+    P-value: 0.0000
+    Effect size: 4.791
+    Significant: Yes
+
+  total_clicks:
+    PPO: 8540.00 ± 311.51
+    Baseline: 2387.60 ± 1235.26
+    Improvement: 257.7%
+    P-value: 0.0000
+    Effect size: 5.025
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.10 ± 0.01
+    Improvement: -1.2%
+    P-value: 0.7521
+    Effect size: -0.189
+    Significant: No
+
+
+Gross Utility vs Baseline:
+  net_utility:
+    PPO: 12161.07 ± 41.68
+    Baseline: 1496.92 ± 857.30
+    Improvement: 712.4%
+    P-value: 0.0000
+    Effect size: 12.576
+    Significant: Yes
+
+  gross_utility:
+    PPO: 16148.54 ± 99.52
+    Baseline: 2527.50 ± 1199.91
+    Improvement: 538.9%
+    P-value: 0.0000
+    Effect size: 11.474
+    Significant: Yes
+
+  total_spend:
+    PPO: 3987.47 ± 68.81
+    Baseline: 1030.57 ± 361.44
+    Improvement: 286.9%
+    P-value: 0.0000
+    Effect size: 8.261
+    Significant: Yes
+
+  total_clicks:
+    PPO: 9521.00 ± 58.67
+    Baseline: 2387.60 ± 1235.26
+    Improvement: 298.8%
+    P-value: 0.0000
+    Effect size: 5.838
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.10 ± 0.01
+    Improvement: 0.0%
+    P-value: 0.9912
+    Effect size: 0.007
+    Significant: No
+
+
+Penalty Wasted Spend vs Baseline:
+  net_utility:
+    PPO: 11990.10 ± 151.37
+    Baseline: 1496.92 ± 857.30
+    Improvement: 701.0%
+    P-value: 0.0000
+    Effect size: 12.362
+    Significant: Yes
+
+  gross_utility:
+    PPO: 15175.54 ± 271.45
+    Baseline: 2527.50 ± 1199.91
+    Improvement: 500.4%
+    P-value: 0.0000
+    Effect size: 10.639
+    Significant: Yes
+
+  total_spend:
+    PPO: 3185.44 ± 141.34
+    Baseline: 1030.57 ± 361.44
+    Improvement: 209.1%
+    P-value: 0.0000
+    Effect size: 5.997
+    Significant: Yes
+
+  total_clicks:
+    PPO: 8947.33 ± 160.04
+    Baseline: 2387.60 ± 1235.26
+    Improvement: 274.7%
+    P-value: 0.0000
+    Effect size: 5.366
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.10 ± 0.01
+    Improvement: -0.6%
+    P-value: 0.8819
+    Effect size: -0.089
+    Significant: No
+
+
+
+C10 CONFIGURATION RESULTS:
+----------------------------------------
+
+Baseline Performance Statistics:
+  net_utility:
+    mean: 1178.17
+    std: 1227.99
+    median: 749.65
+    count: 90
+
+  gross_utility:
+    mean: 2793.60
+    std: 2811.44
+    median: 1901.21
+    count: 90
+
+  total_spend:
+    mean: 1615.42
+    std: 1601.71
+    median: 1172.22
+    count: 90
+
+  total_clicks:
+    mean: 2392.23
+    std: 2490.93
+    median: 1840.50
+    count: 90
+
+  cvr:
+    mean: 0.10
+    std: 0.02
+    median: 0.10
+    count: 90
+
+  total_sales_revenue:
+    mean: 4759.11
+    std: 4924.59
+    median: 3650.00
+    count: 90
+
+  underbid_regret:
+    mean: -4559.30
+    std: 1471.78
+    median: -4454.28
+    count: 90
+
+Net Utility vs Baseline:
+  net_utility:
+    PPO: 5146.16 ± 193.20
+    Baseline: 1178.17 ± 1227.99
+    Improvement: 336.8%
+    P-value: 0.0000
+    Effect size: 3.248
+    Significant: Yes
+
+  gross_utility:
+    PPO: 8359.23 ± 743.84
+    Baseline: 2793.60 ± 2811.44
+    Improvement: 199.2%
+    P-value: 0.0010
+    Effect size: 1.988
+    Significant: Yes
+
+  total_spend:
+    PPO: 3213.07 ± 562.73
+    Baseline: 1615.42 ± 1601.71
+    Improvement: 98.9%
+    P-value: 0.0915
+    Effect size: 1.001
+    Significant: No
+
+  total_clicks:
+    PPO: 8594.67 ± 764.79
+    Baseline: 2392.23 ± 2490.93
+    Improvement: 259.3%
+    P-value: 0.0000
+    Effect size: 2.500
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.10 ± 0.02
+    Improvement: -2.7%
+    P-value: 0.8383
+    Effect size: -0.120
+    Significant: No
+
+
+Gross Utility vs Baseline:
+  net_utility:
+    PPO: 5239.80 ± 49.45
+    Baseline: 1178.17 ± 1227.99
+    Improvement: 344.7%
+    P-value: 0.0000
+    Effect size: 3.326
+    Significant: Yes
+
+  gross_utility:
+    PPO: 9349.67 ± 126.08
+    Baseline: 2793.60 ± 2811.44
+    Improvement: 234.7%
+    P-value: 0.0001
+    Effect size: 2.345
+    Significant: Yes
+
+  total_spend:
+    PPO: 4109.87 ± 80.04
+    Baseline: 1615.42 ± 1601.71
+    Improvement: 154.4%
+    P-value: 0.0090
+    Effect size: 1.566
+    Significant: Yes
+
+  total_clicks:
+    PPO: 9613.00 ± 129.63
+    Baseline: 2392.23 ± 2490.93
+    Improvement: 301.8%
+    P-value: 0.0000
+    Effect size: 2.915
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.10 ± 0.02
+    Improvement: -1.0%
+    P-value: 0.9412
+    Effect size: -0.043
+    Significant: No
+
+
+Penalty Wasted Spend vs Baseline:
+  net_utility:
+    PPO: 3646.16 ± 2589.06
+    Baseline: 1178.17 ± 1227.99
+    Improvement: 209.5%
+    P-value: 0.0018
+    Effect size: 1.886
+    Significant: Yes
+
+  gross_utility:
+    PPO: 6191.29 ± 4385.43
+    Baseline: 2793.60 ± 2811.44
+    Improvement: 121.6%
+    P-value: 0.0494
+    Effect size: 1.169
+    Significant: Yes
+
+  total_spend:
+    PPO: 2545.13 ± 1799.79
+    Baseline: 1615.42 ± 1601.71
+    Improvement: 57.6%
+    P-value: 0.3325
+    Effect size: 0.572
+    Significant: No
+
+  total_clicks:
+    PPO: 6365.67 ± 4508.95
+    Baseline: 2392.23 ± 2490.93
+    Improvement: 166.1%
+    P-value: 0.0110
+    Effect size: 1.523
+    Significant: Yes
+
+  cvr:
+    PPO: 0.07 ± 0.05
+    Baseline: 0.10 ± 0.02
+    Improvement: -34.4%
+    P-value: 0.0179
+    Effect size: -1.415
+    Significant: Yes
+
+
+
+C15 CONFIGURATION RESULTS:
+----------------------------------------
+
+Baseline Performance Statistics:
+  net_utility:
+    mean: 738.64
+    std: 974.98
+    median: 250.70
+    count: 135
+
+  gross_utility:
+    mean: 1852.77
+    std: 2119.41
+    median: 941.75
+    count: 135
+
+  total_spend:
+    mean: 1114.13
+    std: 1173.23
+    median: 675.88
+    count: 135
+
+  total_clicks:
+    mean: 1745.58
+    std: 1932.15
+    median: 858.00
+    count: 135
+
+  cvr:
+    mean: 0.08
+    std: 0.04
+    median: 0.10
+    count: 135
+
+  total_sales_revenue:
+    mean: 3507.70
+    std: 3922.18
+    median: 1740.00
+    count: 135
+
+  underbid_regret:
+    mean: -3972.89
+    std: 1980.58
+    median: -4486.42
+    count: 135
+
+Net Utility vs Baseline:
+  net_utility:
+    PPO: 4944.21 ± 3499.40
+    Baseline: 738.64 ± 974.98
+    Improvement: 569.4%
+    P-value: 0.0000
+    Effect size: 3.817
+    Significant: Yes
+
+  gross_utility:
+    PPO: 7740.81 ± 5492.28
+    Baseline: 1852.77 ± 2119.41
+    Improvement: 317.8%
+    P-value: 0.0000
+    Effect size: 2.601
+    Significant: Yes
+
+  total_spend:
+    PPO: 2796.60 ± 2000.21
+    Baseline: 1114.13 ± 1173.23
+    Improvement: 151.0%
+    P-value: 0.0182
+    Effect size: 1.395
+    Significant: Yes
+
+  total_clicks:
+    PPO: 6392.67 ± 4535.74
+    Baseline: 1745.58 ± 1932.15
+    Improvement: 266.2%
+    P-value: 0.0001
+    Effect size: 2.279
+    Significant: Yes
+
+  cvr:
+    PPO: 0.06 ± 0.05
+    Baseline: 0.08 ± 0.04
+    Improvement: -19.3%
+    P-value: 0.5105
+    Effect size: -0.385
+    Significant: No
+
+
+Gross Utility vs Baseline:
+  net_utility:
+    PPO: 7486.06 ± 31.11
+    Baseline: 738.64 ± 974.98
+    Improvement: 913.5%
+    P-value: 0.0000
+    Effect size: 6.946
+    Significant: Yes
+
+  gross_utility:
+    PPO: 12835.83 ± 99.43
+    Baseline: 1852.77 ± 2119.41
+    Improvement: 592.8%
+    P-value: 0.0000
+    Effect size: 5.201
+    Significant: Yes
+
+  total_spend:
+    PPO: 5349.77 ± 68.47
+    Baseline: 1114.13 ± 1173.23
+    Improvement: 380.2%
+    P-value: 0.0000
+    Effect size: 3.623
+    Significant: Yes
+
+  total_clicks:
+    PPO: 10600.33 ± 82.12
+    Baseline: 1745.58 ± 1932.15
+    Improvement: 507.3%
+    P-value: 0.0000
+    Effect size: 4.600
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.08 ± 0.04
+    Improvement: 24.4%
+    P-value: 0.3982
+    Effect size: 0.495
+    Significant: No
+
+
+Penalty Wasted Spend vs Baseline:
+  net_utility:
+    PPO: 7831.23 ± 324.47
+    Baseline: 738.64 ± 974.98
+    Improvement: 960.2%
+    P-value: 0.0000
+    Effect size: 7.293
+    Significant: Yes
+
+  gross_utility:
+    PPO: 11810.61 ± 353.90
+    Baseline: 1852.77 ± 2119.41
+    Improvement: 537.5%
+    P-value: 0.0000
+    Effect size: 4.714
+    Significant: Yes
+
+  total_spend:
+    PPO: 3979.38 ± 404.14
+    Baseline: 1114.13 ± 1173.23
+    Improvement: 257.2%
+    P-value: 0.0000
+    Effect size: 2.448
+    Significant: Yes
+
+  total_clicks:
+    PPO: 9753.67 ± 292.26
+    Baseline: 1745.58 ± 1932.15
+    Improvement: 458.8%
+    P-value: 0.0000
+    Effect size: 4.159
+    Significant: Yes
+
+  cvr:
+    PPO: 0.10 ± 0.00
+    Baseline: 0.08 ± 0.04
+    Improvement: 25.7%
+    P-value: 0.3753
+    Effect size: 0.519
+    Significant: No
+
+
+
+SUMMARY OF KEY FINDINGS:
+------------------------------
+Top 5 Improvements vs Baseline:
+  1. C15 Penalty - wasted_spend_net_utility: 960.2%
+  2. C15 Gross - utility_net_utility: 913.5%
+  3. C5 Gross - utility_net_utility: 712.4%
+  4. C5 Penalty - wasted_spend_net_utility: 701.0%
+  5. C5 Net - utility_net_utility: 681.8%
+
+Statistically Significant Improvements:
+  • C15 Penalty - wasted_spend_net_utility: 960.2%
+  • C15 Gross - utility_net_utility: 913.5%
+  • C5 Gross - utility_net_utility: 712.4%
+  • C5 Penalty - wasted_spend_net_utility: 701.0%
+  • C5 Net - utility_net_utility: 681.8%
+  • C15 Gross - utility_gross_utility: 592.8%
+  • C15 Net - utility_net_utility: 569.4%
+  • C5 Gross - utility_gross_utility: 538.9%
+  • C15 Penalty - wasted_spend_gross_utility: 537.5%
+  • C15 Gross - utility_total_clicks: 507.3%
+  • C5 Penalty - wasted_spend_gross_utility: 500.4%
+  • C5 Net - utility_gross_utility: 473.1%
+  • C15 Penalty - wasted_spend_total_clicks: 458.8%
+  • C15 Gross - utility_total_spend: 380.2%
+  • C10 Gross - utility_net_utility: 344.7%
+  • C10 Net - utility_net_utility: 336.8%
+  • C15 Net - utility_gross_utility: 317.8%
+  • C10 Gross - utility_total_clicks: 301.8%
+  • C5 Gross - utility_total_clicks: 298.8%
+  • C5 Gross - utility_total_spend: 286.9%
+  • C5 Penalty - wasted_spend_total_clicks: 274.7%
+  • C15 Net - utility_total_clicks: 266.2%
+  • C10 Net - utility_total_clicks: 259.3%
+  • C5 Net - utility_total_clicks: 257.7%
+  • C15 Penalty - wasted_spend_total_spend: 257.2%
+  • C10 Gross - utility_gross_utility: 234.7%
+  • C10 Penalty - wasted_spend_net_utility: 209.5%
+  • C5 Penalty - wasted_spend_total_spend: 209.1%
+  • C10 Net - utility_gross_utility: 199.2%
+  • C5 Net - utility_total_spend: 170.0%
+  • C10 Penalty - wasted_spend_total_clicks: 166.1%
+  • C10 Gross - utility_total_spend: 154.4%
+  • C15 Net - utility_total_spend: 151.0%
+  • C10 Penalty - wasted_spend_gross_utility: 121.6%
+  • C10 Penalty - wasted_spend_cvr: -34.4%
+

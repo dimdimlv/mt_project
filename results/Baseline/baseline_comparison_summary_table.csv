@@ -1,0 +1,10 @@
+Configuration,Competitors,Reward Function,PPO Net Utility,Baseline Net Utility,Improvement (%),P-value,Effect Size,Significant
+C5,5,Net Utility,11702.50,1496.92,681.8%,0.0000,12.007,Yes
+C5,5,Gross Utility,12161.07,1496.92,712.4%,0.0000,12.576,Yes
+C5,5,Penalty Wasted Spend,11990.10,1496.92,701.0%,0.0000,12.362,Yes
+C10,10,Net Utility,5146.16,1178.17,336.8%,0.0000,3.248,Yes
+C10,10,Gross Utility,5239.80,1178.17,344.7%,0.0000,3.326,Yes
+C10,10,Penalty Wasted Spend,3646.16,1178.17,209.5%,0.0018,1.886,Yes
+C15,15,Net Utility,4944.21,738.64,569.4%,0.0000,3.817,Yes
+C15,15,Gross Utility,7486.06,738.64,913.5%,0.0000,6.946,Yes
+C15,15,Penalty Wasted Spend,7831.23,738.64,960.2%,0.0000,7.293,Yes
