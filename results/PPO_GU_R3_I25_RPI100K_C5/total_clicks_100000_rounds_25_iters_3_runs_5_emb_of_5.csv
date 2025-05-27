@@ -1,0 +1,451 @@
+Run,Agent,Iteration,Total Clicks
+0,PPO Bidder - Gross Utility 1,0,2953
+0,PPO Bidder - Gross Utility 1,1,8738
+0,PPO Bidder - Gross Utility 1,2,9436
+0,PPO Bidder - Gross Utility 1,3,9431
+0,PPO Bidder - Gross Utility 1,4,9594
+0,PPO Bidder - Gross Utility 1,5,9659
+0,PPO Bidder - Gross Utility 1,6,9561
+0,PPO Bidder - Gross Utility 1,7,9466
+0,PPO Bidder - Gross Utility 1,8,9475
+0,PPO Bidder - Gross Utility 1,9,9505
+0,PPO Bidder - Gross Utility 1,10,9457
+0,PPO Bidder - Gross Utility 1,11,9321
+0,PPO Bidder - Gross Utility 1,12,9462
+0,PPO Bidder - Gross Utility 1,13,9468
+0,PPO Bidder - Gross Utility 1,14,9469
+0,PPO Bidder - Gross Utility 1,15,9475
+0,PPO Bidder - Gross Utility 1,16,9538
+0,PPO Bidder - Gross Utility 1,17,9430
+0,PPO Bidder - Gross Utility 1,18,9425
+0,PPO Bidder - Gross Utility 1,19,9406
+0,PPO Bidder - Gross Utility 1,20,9482
+0,PPO Bidder - Gross Utility 1,21,9536
+0,PPO Bidder - Gross Utility 1,22,9421
+0,PPO Bidder - Gross Utility 1,23,9329
+0,PPO Bidder - Gross Utility 1,24,9469
+0,Truthful Competitor 2,0,215
+0,Truthful Competitor 2,1,2672
+0,Truthful Competitor 2,2,2409
+0,Truthful Competitor 2,3,2459
+0,Truthful Competitor 2,4,2456
+0,Truthful Competitor 2,5,2433
+0,Truthful Competitor 2,6,2396
+0,Truthful Competitor 2,7,2514
+0,Truthful Competitor 2,8,2455
+0,Truthful Competitor 2,9,2469
+0,Truthful Competitor 2,10,2407
+0,Truthful Competitor 2,11,2430
+0,Truthful Competitor 2,12,2421
+0,Truthful Competitor 2,13,2453
+0,Truthful Competitor 2,14,2477
+0,Truthful Competitor 2,15,2471
+0,Truthful Competitor 2,16,2514
+0,Truthful Competitor 2,17,2426
+0,Truthful Competitor 2,18,2411
+0,Truthful Competitor 2,19,2461
+0,Truthful Competitor 2,20,2513
+0,Truthful Competitor 2,21,2525
+0,Truthful Competitor 2,22,2453
+0,Truthful Competitor 2,23,2474
+0,Truthful Competitor 2,24,2536
+0,Truthful Competitor 3,0,1351
+0,Truthful Competitor 3,1,4487
+0,Truthful Competitor 3,2,4332
+0,Truthful Competitor 3,3,4293
+0,Truthful Competitor 3,4,4207
+0,Truthful Competitor 3,5,4276
+0,Truthful Competitor 3,6,4120
+0,Truthful Competitor 3,7,4184
+0,Truthful Competitor 3,8,4293
+0,Truthful Competitor 3,9,4216
+0,Truthful Competitor 3,10,4314
+0,Truthful Competitor 3,11,4481
+0,Truthful Competitor 3,12,4226
+0,Truthful Competitor 3,13,4310
+0,Truthful Competitor 3,14,4195
+0,Truthful Competitor 3,15,4306
+0,Truthful Competitor 3,16,4212
+0,Truthful Competitor 3,17,4132
+0,Truthful Competitor 3,18,4308
+0,Truthful Competitor 3,19,4304
+0,Truthful Competitor 3,20,4402
+0,Truthful Competitor 3,21,4207
+0,Truthful Competitor 3,22,4386
+0,Truthful Competitor 3,23,4368
+0,Truthful Competitor 3,24,4295
+0,Truthful Competitor 4,0,988
+0,Truthful Competitor 4,1,1818
+0,Truthful Competitor 4,2,1933
+0,Truthful Competitor 4,3,2076
+0,Truthful Competitor 4,4,2021
+0,Truthful Competitor 4,5,2029
+0,Truthful Competitor 4,6,1963
+0,Truthful Competitor 4,7,2010
+0,Truthful Competitor 4,8,1921
+0,Truthful Competitor 4,9,2012
+0,Truthful Competitor 4,10,1965
+0,Truthful Competitor 4,11,1964
+0,Truthful Competitor 4,12,1860
+0,Truthful Competitor 4,13,1965
+0,Truthful Competitor 4,14,2005
+0,Truthful Competitor 4,15,1964
+0,Truthful Competitor 4,16,1961
+0,Truthful Competitor 4,17,2000
+0,Truthful Competitor 4,18,1966
+0,Truthful Competitor 4,19,1988
+0,Truthful Competitor 4,20,1975
+0,Truthful Competitor 4,21,1934
+0,Truthful Competitor 4,22,1907
+0,Truthful Competitor 4,23,1932
+0,Truthful Competitor 4,24,2071
+0,Truthful Competitor 5,0,2948
+0,Truthful Competitor 5,1,2210
+0,Truthful Competitor 5,2,2176
+0,Truthful Competitor 5,3,2239
+0,Truthful Competitor 5,4,2189
+0,Truthful Competitor 5,5,2168
+0,Truthful Competitor 5,6,2163
+0,Truthful Competitor 5,7,2145
+0,Truthful Competitor 5,8,2206
+0,Truthful Competitor 5,9,2198
+0,Truthful Competitor 5,10,2141
+0,Truthful Competitor 5,11,2184
+0,Truthful Competitor 5,12,2178
+0,Truthful Competitor 5,13,2223
+0,Truthful Competitor 5,14,2154
+0,Truthful Competitor 5,15,2148
+0,Truthful Competitor 5,16,2102
+0,Truthful Competitor 5,17,2138
+0,Truthful Competitor 5,18,2174
+0,Truthful Competitor 5,19,2175
+0,Truthful Competitor 5,20,2153
+0,Truthful Competitor 5,21,2076
+0,Truthful Competitor 5,22,2121
+0,Truthful Competitor 5,23,2133
+0,Truthful Competitor 5,24,2059
+0,Truthful Competitor 6,0,666
+0,Truthful Competitor 6,1,807
+0,Truthful Competitor 6,2,499
+0,Truthful Competitor 6,3,456
+0,Truthful Competitor 6,4,475
+0,Truthful Competitor 6,5,496
+0,Truthful Competitor 6,6,494
+0,Truthful Competitor 6,7,509
+0,Truthful Competitor 6,8,496
+0,Truthful Competitor 6,9,539
+0,Truthful Competitor 6,10,525
+0,Truthful Competitor 6,11,567
+0,Truthful Competitor 6,12,513
+0,Truthful Competitor 6,13,497
+0,Truthful Competitor 6,14,492
+0,Truthful Competitor 6,15,462
+0,Truthful Competitor 6,16,538
+0,Truthful Competitor 6,17,569
+0,Truthful Competitor 6,18,534
+0,Truthful Competitor 6,19,548
+0,Truthful Competitor 6,20,564
+0,Truthful Competitor 6,21,546
+0,Truthful Competitor 6,22,531
+0,Truthful Competitor 6,23,537
+0,Truthful Competitor 6,24,488
+1,PPO Bidder - Gross Utility 1,0,5582
+1,PPO Bidder - Gross Utility 1,1,9211
+1,PPO Bidder - Gross Utility 1,2,9291
+1,PPO Bidder - Gross Utility 1,3,9578
+1,PPO Bidder - Gross Utility 1,4,9486
+1,PPO Bidder - Gross Utility 1,5,9582
+1,PPO Bidder - Gross Utility 1,6,9528
+1,PPO Bidder - Gross Utility 1,7,9469
+1,PPO Bidder - Gross Utility 1,8,9471
+1,PPO Bidder - Gross Utility 1,9,9476
+1,PPO Bidder - Gross Utility 1,10,9542
+1,PPO Bidder - Gross Utility 1,11,9375
+1,PPO Bidder - Gross Utility 1,12,9770
+1,PPO Bidder - Gross Utility 1,13,9574
+1,PPO Bidder - Gross Utility 1,14,9416
+1,PPO Bidder - Gross Utility 1,15,9583
+1,PPO Bidder - Gross Utility 1,16,9497
+1,PPO Bidder - Gross Utility 1,17,9466
+1,PPO Bidder - Gross Utility 1,18,9504
+1,PPO Bidder - Gross Utility 1,19,9362
+1,PPO Bidder - Gross Utility 1,20,9480
+1,PPO Bidder - Gross Utility 1,21,9552
+1,PPO Bidder - Gross Utility 1,22,9607
+1,PPO Bidder - Gross Utility 1,23,9533
+1,PPO Bidder - Gross Utility 1,24,9603
+1,Truthful Competitor 2,0,167
+1,Truthful Competitor 2,1,2396
+1,Truthful Competitor 2,2,2469
+1,Truthful Competitor 2,3,2386
+1,Truthful Competitor 2,4,2348
+1,Truthful Competitor 2,5,2484
+1,Truthful Competitor 2,6,2511
+1,Truthful Competitor 2,7,2421
+1,Truthful Competitor 2,8,2404
+1,Truthful Competitor 2,9,2446
+1,Truthful Competitor 2,10,2421
+1,Truthful Competitor 2,11,2480
+1,Truthful Competitor 2,12,2509
+1,Truthful Competitor 2,13,2352
+1,Truthful Competitor 2,14,2440
+1,Truthful Competitor 2,15,2440
+1,Truthful Competitor 2,16,2431
+1,Truthful Competitor 2,17,2454
+1,Truthful Competitor 2,18,2498
+1,Truthful Competitor 2,19,2556
+1,Truthful Competitor 2,20,2377
+1,Truthful Competitor 2,21,2325
+1,Truthful Competitor 2,22,2429
+1,Truthful Competitor 2,23,2418
+1,Truthful Competitor 2,24,2387
+1,Truthful Competitor 3,0,6
+1,Truthful Competitor 3,1,4619
+1,Truthful Competitor 3,2,4367
+1,Truthful Competitor 3,3,4246
+1,Truthful Competitor 3,4,4227
+1,Truthful Competitor 3,5,4279
+1,Truthful Competitor 3,6,4283
+1,Truthful Competitor 3,7,4419
+1,Truthful Competitor 3,8,4298
+1,Truthful Competitor 3,9,4272
+1,Truthful Competitor 3,10,4164
+1,Truthful Competitor 3,11,4304
+1,Truthful Competitor 3,12,4346
+1,Truthful Competitor 3,13,4386
+1,Truthful Competitor 3,14,4376
+1,Truthful Competitor 3,15,4324
+1,Truthful Competitor 3,16,4236
+1,Truthful Competitor 3,17,4291
+1,Truthful Competitor 3,18,4243
+1,Truthful Competitor 3,19,4235
+1,Truthful Competitor 3,20,4196
+1,Truthful Competitor 3,21,4303
+1,Truthful Competitor 3,22,4282
+1,Truthful Competitor 3,23,4262
+1,Truthful Competitor 3,24,4218
+1,Truthful Competitor 4,0,259
+1,Truthful Competitor 4,1,1116
+1,Truthful Competitor 4,2,1961
+1,Truthful Competitor 4,3,2084
+1,Truthful Competitor 4,4,1997
+1,Truthful Competitor 4,5,2003
+1,Truthful Competitor 4,6,1982
+1,Truthful Competitor 4,7,1999
+1,Truthful Competitor 4,8,1994
+1,Truthful Competitor 4,9,2072
+1,Truthful Competitor 4,10,1972
+1,Truthful Competitor 4,11,1830
+1,Truthful Competitor 4,12,1894
+1,Truthful Competitor 4,13,1935
+1,Truthful Competitor 4,14,2012
+1,Truthful Competitor 4,15,2036
+1,Truthful Competitor 4,16,2015
+1,Truthful Competitor 4,17,2041
+1,Truthful Competitor 4,18,1972
+1,Truthful Competitor 4,19,1930
+1,Truthful Competitor 4,20,2047
+1,Truthful Competitor 4,21,2060
+1,Truthful Competitor 4,22,1982
+1,Truthful Competitor 4,23,2030
+1,Truthful Competitor 4,24,1995
+1,Truthful Competitor 5,0,2805
+1,Truthful Competitor 5,1,2020
+1,Truthful Competitor 5,2,2098
+1,Truthful Competitor 5,3,2160
+1,Truthful Competitor 5,4,2113
+1,Truthful Competitor 5,5,2120
+1,Truthful Competitor 5,6,2015
+1,Truthful Competitor 5,7,2097
+1,Truthful Competitor 5,8,2153
+1,Truthful Competitor 5,9,2148
+1,Truthful Competitor 5,10,2157
+1,Truthful Competitor 5,11,2173
+1,Truthful Competitor 5,12,2181
+1,Truthful Competitor 5,13,2128
+1,Truthful Competitor 5,14,2082
+1,Truthful Competitor 5,15,2195
+1,Truthful Competitor 5,16,2173
+1,Truthful Competitor 5,17,2083
+1,Truthful Competitor 5,18,2143
+1,Truthful Competitor 5,19,2131
+1,Truthful Competitor 5,20,2114
+1,Truthful Competitor 5,21,2069
+1,Truthful Competitor 5,22,2071
+1,Truthful Competitor 5,23,2165
+1,Truthful Competitor 5,24,2197
+1,Truthful Competitor 6,0,792
+1,Truthful Competitor 6,1,426
+1,Truthful Competitor 6,2,374
+1,Truthful Competitor 6,3,423
+1,Truthful Competitor 6,4,434
+1,Truthful Competitor 6,5,442
+1,Truthful Competitor 6,6,471
+1,Truthful Competitor 6,7,480
+1,Truthful Competitor 6,8,497
+1,Truthful Competitor 6,9,522
+1,Truthful Competitor 6,10,483
+1,Truthful Competitor 6,11,455
+1,Truthful Competitor 6,12,512
+1,Truthful Competitor 6,13,520
+1,Truthful Competitor 6,14,475
+1,Truthful Competitor 6,15,495
+1,Truthful Competitor 6,16,508
+1,Truthful Competitor 6,17,543
+1,Truthful Competitor 6,18,545
+1,Truthful Competitor 6,19,505
+1,Truthful Competitor 6,20,489
+1,Truthful Competitor 6,21,493
+1,Truthful Competitor 6,22,533
+1,Truthful Competitor 6,23,521
+1,Truthful Competitor 6,24,501
+2,PPO Bidder - Gross Utility 1,0,2169
+2,PPO Bidder - Gross Utility 1,1,9429
+2,PPO Bidder - Gross Utility 1,2,9463
+2,PPO Bidder - Gross Utility 1,3,9497
+2,PPO Bidder - Gross Utility 1,4,9430
+2,PPO Bidder - Gross Utility 1,5,9464
+2,PPO Bidder - Gross Utility 1,6,9473
+2,PPO Bidder - Gross Utility 1,7,9375
+2,PPO Bidder - Gross Utility 1,8,9463
+2,PPO Bidder - Gross Utility 1,9,9301
+2,PPO Bidder - Gross Utility 1,10,9415
+2,PPO Bidder - Gross Utility 1,11,9496
+2,PPO Bidder - Gross Utility 1,12,9502
+2,PPO Bidder - Gross Utility 1,13,9448
+2,PPO Bidder - Gross Utility 1,14,9339
+2,PPO Bidder - Gross Utility 1,15,9540
+2,PPO Bidder - Gross Utility 1,16,9504
+2,PPO Bidder - Gross Utility 1,17,9486
+2,PPO Bidder - Gross Utility 1,18,9400
+2,PPO Bidder - Gross Utility 1,19,9439
+2,PPO Bidder - Gross Utility 1,20,9575
+2,PPO Bidder - Gross Utility 1,21,9652
+2,PPO Bidder - Gross Utility 1,22,9487
+2,PPO Bidder - Gross Utility 1,23,9569
+2,PPO Bidder - Gross Utility 1,24,9491
+2,Truthful Competitor 2,0,611
+2,Truthful Competitor 2,1,2052
+2,Truthful Competitor 2,2,2370
+2,Truthful Competitor 2,3,2396
+2,Truthful Competitor 2,4,2408
+2,Truthful Competitor 2,5,2504
+2,Truthful Competitor 2,6,2512
+2,Truthful Competitor 2,7,2487
+2,Truthful Competitor 2,8,2335
+2,Truthful Competitor 2,9,2390
+2,Truthful Competitor 2,10,2518
+2,Truthful Competitor 2,11,2468
+2,Truthful Competitor 2,12,2416
+2,Truthful Competitor 2,13,2406
+2,Truthful Competitor 2,14,2462
+2,Truthful Competitor 2,15,2430
+2,Truthful Competitor 2,16,2464
+2,Truthful Competitor 2,17,2331
+2,Truthful Competitor 2,18,2365
+2,Truthful Competitor 2,19,2369
+2,Truthful Competitor 2,20,2342
+2,Truthful Competitor 2,21,2437
+2,Truthful Competitor 2,22,2496
+2,Truthful Competitor 2,23,2424
+2,Truthful Competitor 2,24,2423
+2,Truthful Competitor 3,0,165
+2,Truthful Competitor 3,1,4554
+2,Truthful Competitor 3,2,4337
+2,Truthful Competitor 3,3,4262
+2,Truthful Competitor 3,4,4192
+2,Truthful Competitor 3,5,4270
+2,Truthful Competitor 3,6,4153
+2,Truthful Competitor 3,7,4218
+2,Truthful Competitor 3,8,4169
+2,Truthful Competitor 3,9,4169
+2,Truthful Competitor 3,10,4225
+2,Truthful Competitor 3,11,4304
+2,Truthful Competitor 3,12,4288
+2,Truthful Competitor 3,13,4320
+2,Truthful Competitor 3,14,4357
+2,Truthful Competitor 3,15,4307
+2,Truthful Competitor 3,16,4265
+2,Truthful Competitor 3,17,4338
+2,Truthful Competitor 3,18,4314
+2,Truthful Competitor 3,19,4251
+2,Truthful Competitor 3,20,4231
+2,Truthful Competitor 3,21,4140
+2,Truthful Competitor 3,22,4237
+2,Truthful Competitor 3,23,4189
+2,Truthful Competitor 3,24,4149
+2,Truthful Competitor 4,0,606
+2,Truthful Competitor 4,1,1956
+2,Truthful Competitor 4,2,2040
+2,Truthful Competitor 4,3,1990
+2,Truthful Competitor 4,4,1955
+2,Truthful Competitor 4,5,1939
+2,Truthful Competitor 4,6,1976
+2,Truthful Competitor 4,7,1980
+2,Truthful Competitor 4,8,2038
+2,Truthful Competitor 4,9,2045
+2,Truthful Competitor 4,10,2003
+2,Truthful Competitor 4,11,2046
+2,Truthful Competitor 4,12,1999
+2,Truthful Competitor 4,13,2025
+2,Truthful Competitor 4,14,2012
+2,Truthful Competitor 4,15,2085
+2,Truthful Competitor 4,16,2043
+2,Truthful Competitor 4,17,1940
+2,Truthful Competitor 4,18,1904
+2,Truthful Competitor 4,19,1989
+2,Truthful Competitor 4,20,2005
+2,Truthful Competitor 4,21,1924
+2,Truthful Competitor 4,22,1911
+2,Truthful Competitor 4,23,1976
+2,Truthful Competitor 4,24,2041
+2,Truthful Competitor 5,0,868
+2,Truthful Competitor 5,1,2346
+2,Truthful Competitor 5,2,2252
+2,Truthful Competitor 5,3,2147
+2,Truthful Competitor 5,4,2077
+2,Truthful Competitor 5,5,2148
+2,Truthful Competitor 5,6,2120
+2,Truthful Competitor 5,7,2238
+2,Truthful Competitor 5,8,2109
+2,Truthful Competitor 5,9,2181
+2,Truthful Competitor 5,10,2078
+2,Truthful Competitor 5,11,1988
+2,Truthful Competitor 5,12,2076
+2,Truthful Competitor 5,13,2117
+2,Truthful Competitor 5,14,2069
+2,Truthful Competitor 5,15,2062
+2,Truthful Competitor 5,16,2105
+2,Truthful Competitor 5,17,2148
+2,Truthful Competitor 5,18,2157
+2,Truthful Competitor 5,19,2071
+2,Truthful Competitor 5,20,2121
+2,Truthful Competitor 5,21,2117
+2,Truthful Competitor 5,22,2186
+2,Truthful Competitor 5,23,2208
+2,Truthful Competitor 5,24,2098
+2,Truthful Competitor 6,0,1059
+2,Truthful Competitor 6,1,388
+2,Truthful Competitor 6,2,461
+2,Truthful Competitor 6,3,519
+2,Truthful Competitor 6,4,555
+2,Truthful Competitor 6,5,513
+2,Truthful Competitor 6,6,485
+2,Truthful Competitor 6,7,493
+2,Truthful Competitor 6,8,483
+2,Truthful Competitor 6,9,525
+2,Truthful Competitor 6,10,527
+2,Truthful Competitor 6,11,471
+2,Truthful Competitor 6,12,492
+2,Truthful Competitor 6,13,520
+2,Truthful Competitor 6,14,544
+2,Truthful Competitor 6,15,531
+2,Truthful Competitor 6,16,460
+2,Truthful Competitor 6,17,477
+2,Truthful Competitor 6,18,520
+2,Truthful Competitor 6,19,499
+2,Truthful Competitor 6,20,522
+2,Truthful Competitor 6,21,575
+2,Truthful Competitor 6,22,561
+2,Truthful Competitor 6,23,522
+2,Truthful Competitor 6,24,558
