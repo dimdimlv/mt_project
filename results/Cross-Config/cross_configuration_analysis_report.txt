@@ -1,0 +1,113 @@
+================================================================================
+CROSS-CONFIGURATION ANALYSIS OF PPO REWARD FUNCTIONS
+================================================================================
+
+EXPERIMENT OVERVIEW:
+--------------------
+This analysis compares three reward functions across three competition levels:
+• Net Utility (NU): (VPC * click) - price_paid
+• Gross Utility (GU): VPC * click
+• Penalty Wasted Spend (PWS): reward if click, penalty if no click
+
+Competition Levels:
+• C5: 5 competitors
+• C10: 10 competitors
+• C15: 15 competitors
+
+C5 CONFIGURATION RESULTS:
+------------------------------
+
+Net Utility:
+  final_net_utility: 11702.50
+  final_gross_utility: 14484.67
+  final_total_spend: 2782.16
+  final_total_clicks: 8540.00
+  final_acos: 0.17
+
+Gross Utility:
+  final_net_utility: 12161.07
+  final_gross_utility: 16148.54
+  final_total_spend: 3987.47
+  final_total_clicks: 9521.00
+  final_acos: 0.21
+
+Penalty Wasted Spend:
+  final_net_utility: 11990.10
+  final_gross_utility: 15175.54
+  final_total_spend: 3185.44
+  final_total_clicks: 8947.33
+  final_acos: 0.18
+
+C10 CONFIGURATION RESULTS:
+------------------------------
+
+Net Utility:
+  final_net_utility: 5146.16
+  final_gross_utility: 8359.23
+  final_total_spend: 3213.07
+  final_total_clicks: 8594.67
+  final_acos: 0.19
+
+Gross Utility:
+  final_net_utility: 5239.80
+  final_gross_utility: 9349.67
+  final_total_spend: 4109.87
+  final_total_clicks: 9613.00
+  final_acos: 0.22
+
+Penalty Wasted Spend:
+  final_net_utility: 3646.16
+  final_gross_utility: 6191.29
+  final_total_spend: 2545.13
+  final_total_clicks: 6365.67
+  final_acos: 0.14
+
+C15 CONFIGURATION RESULTS:
+------------------------------
+
+Net Utility:
+  final_net_utility: 4944.21
+  final_gross_utility: 7740.81
+  final_total_spend: 2796.60
+  final_total_clicks: 6392.67
+  final_acos: 0.15
+
+Gross Utility:
+  final_net_utility: 7486.06
+  final_gross_utility: 12835.83
+  final_total_spend: 5349.77
+  final_total_clicks: 10600.33
+  final_acos: 0.25
+
+Penalty Wasted Spend:
+  final_net_utility: 7831.23
+  final_gross_utility: 11810.61
+  final_total_spend: 3979.38
+  final_total_clicks: 9753.67
+  final_acos: 0.20
+
+CROSS-CONFIGURATION INSIGHTS:
+------------------------------
+Best Net Utility: Gross Utility in C5 (12161.07)
+Best Gross Utility: Gross Utility in C5 (16148.54)
+
+COMPETITION IMPACT ANALYSIS:
+------------------------------
+
+Net Utility performance trend:
+  C5: 11702.50
+  C10: 5146.16
+  C15: 4944.21
+
+Gross Utility performance trend:
+  C5: 12161.07
+  C10: 5239.80
+  C15: 7486.06
+
+Penalty Wasted Spend performance trend:
+  C5: 11990.10
+  C10: 3646.16
+  C15: 7831.23
+
+Report generated: 2025-05-27 22:12:47.663643
+================================================================================

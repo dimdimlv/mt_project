@@ -1,0 +1,80 @@
+================================================================================
+COMPREHENSIVE ANALYSIS OF PPO REWARD FUNCTIONS IN AUCTIONSGYM (C10)
+================================================================================
+
+EXPERIMENT OVERVIEW:
+--------------------
+This analysis compares three PPO reward function configurations (C10):
+1. PPO_NU_R3_I25_RPI100K_C10: Net Utility (VPC * click) - price_paid
+2. PPO_GU_R3_I25_RPI100K_C10: Gross Utility VPC * click
+3. PPO_PWS_R3_I25_RPI100K_C10: Penalty for Wasted Spend
+All experiments: 100K rounds, 25 iterations, 3 runs, 10 competitors
+
+SUMMARY METRICS:
+--------------------
+
+Net Utility:
+  final_net_utility: 5146.1614
+  net_utility_learning_slope: 97.6677
+  final_gross_utility: 8359.2297
+  gross_utility_learning_slope: 151.9543
+  final_total_spend: 3213.0684
+  total_spend_learning_slope: 54.2866
+  final_total_clicks: 8594.6667
+  total_clicks_learning_slope: 156.2341
+  final_acos: 0.1908
+  acos_learning_slope: 0.0004
+  learning_curve_slope: 97.6677
+  convergence_iteration: 6
+  avg_overbid_regret: 0.0000
+  avg_underbid_regret: -4986.8130
+  total_regret: -4986.8130
+
+Gross Utility:
+  final_net_utility: 5239.7974
+  net_utility_learning_slope: 86.0369
+  final_gross_utility: 9349.6675
+  gross_utility_learning_slope: 106.8169
+  final_total_spend: 4109.8701
+  total_spend_learning_slope: 20.7800
+  final_total_clicks: 9613.0000
+  total_clicks_learning_slope: 109.8254
+  final_acos: 0.2161
+  acos_learning_slope: -0.0389
+  learning_curve_slope: 86.0369
+  convergence_iteration: 5
+  avg_overbid_regret: 0.0000
+  avg_underbid_regret: -5374.8417
+  total_regret: -5374.8417
+
+Penalty Wasted Spend:
+  final_net_utility: 3646.1591
+  net_utility_learning_slope: 58.1111
+  final_gross_utility: 6191.2896
+  gross_utility_learning_slope: 90.6419
+  final_total_spend: 2545.1305
+  total_spend_learning_slope: 32.5309
+  final_total_clicks: 6365.6667
+  total_clicks_learning_slope: 93.1949
+  final_acos: 0.1357
+  acos_learning_slope: -0.0003
+  learning_curve_slope: 58.1111
+  convergence_iteration: 5
+  avg_overbid_regret: 0.0000
+  avg_underbid_regret: -3985.5527
+  total_regret: -3985.5527
+
+KEY FINDINGS:
+--------------------
+1. Best Final Net Utility: Gross Utility (5239.7974)
+2. Fastest Convergence: Gross Utility (5 iterations)
+3. Lowest Total Regret: Gross Utility (-5374.8417)
+
+BEHAVIORAL INSIGHTS:
+--------------------
+• Net Utility: Balanced approach considering both revenue and costs
+• Gross Utility: More aggressive bidding, potentially higher spend
+• Penalty Wasted Spend: Conservative approach, focuses on click efficiency
+
+Report generated: 2025-05-27 22:05:55.441852
+================================================================================

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Comprehensive Analysis of PPO Reward Functions in AuctionGym
+Comprehensive Analysis of PPO Reward Functions in AuctionGym (C10 Configuration)
 
 This script analyzes the behavioral differences between three PPO reward function configurations:
-1. PPO_NU_R3_I25_RPI100K_C5: Net Utility (VPC * click) - price_paid
-2. PPO_GU_R3_I25_RPI100K_C5: Gross Utility VPC * click  
-3. PPO_PWS_R3_I25_RPI100K_C5: Penalty for Wasted Spend
+1. PPO_NU_R3_I25_RPI100K_C10: Net Utility (VPC * click) - price_paid
+2. PPO_GU_R3_I25_RPI100K_C10: Gross Utility VPC * click  
+3. PPO_PWS_R3_I25_RPI100K_C10: Penalty for Wasted Spend
 
 Author: Analysis Framework for AuctionGym PPO Experiments
 """
@@ -28,9 +28,9 @@ class RewardFunctionAnalyzer:
     def __init__(self, results_dir="/Users/dimdim/PycharmProjects/mt_project/results"):
         self.results_dir = Path(results_dir)
         self.reward_functions = {
-            'net_utility': 'PPO_NU_R3_I25_RPI100K_C5',
-            'gross_utility': 'PPO_GU_R3_I25_RPI100K_C5', 
-            'penalty_wasted_spend': 'PPO_PWS_R3_I25_RPI100K_C5'
+            'net_utility': 'PPO_NU_R3_I25_RPI100K_C10',
+            'gross_utility': 'PPO_GU_R3_I25_RPI100K_C10', 
+            'penalty_wasted_spend': 'PPO_PWS_R3_I25_RPI100K_C10'
         }
         self.data = {}
         self.metrics = {}
@@ -317,9 +317,9 @@ class RewardFunctionAnalyzer:
         self._plot_cost_management(ax9)
         
         plt.tight_layout()
-        plt.savefig(self.results_dir / 'ppo_reward_functions_comprehensive_analysis.pdf', 
+        plt.savefig(self.results_dir / 'ppo_reward_functions_c10_comprehensive_analysis.pdf', 
                    dpi=300, bbox_inches='tight')
-        plt.savefig(self.results_dir / 'ppo_reward_functions_comprehensive_analysis.png', 
+        plt.savefig(self.results_dir / 'ppo_reward_functions_c10_comprehensive_analysis.png', 
                    dpi=300, bbox_inches='tight')
         plt.show()
     
@@ -492,20 +492,20 @@ class RewardFunctionAnalyzer:
         """Generate a detailed text report of findings"""
         print("\nGenerating detailed analysis report...")
         
-        report_path = self.results_dir / 'ppo_reward_functions_analysis_report.txt'
+        report_path = self.results_dir / 'ppo_reward_functions_c10_analysis_report.txt'
         
         with open(report_path, 'w') as f:
             f.write("="*80 + "\n")
-            f.write("COMPREHENSIVE ANALYSIS OF PPO REWARD FUNCTIONS IN AUCTIONSGYM\n")
+            f.write("COMPREHENSIVE ANALYSIS OF PPO REWARD FUNCTIONS IN AUCTIONSGYM (C10)\n")
             f.write("="*80 + "\n\n")
             
             f.write("EXPERIMENT OVERVIEW:\n")
             f.write("-" * 20 + "\n")
-            f.write("This analysis compares three PPO reward function configurations:\n")
-            f.write("1. PPO_NU_R3_I25_RPI100K_C5: Net Utility (VPC * click) - price_paid\n")
-            f.write("2. PPO_GU_R3_I25_RPI100K_C5: Gross Utility VPC * click\n")
-            f.write("3. PPO_PWS_R3_I25_RPI100K_C5: Penalty for Wasted Spend\n")
-            f.write("All experiments: 100K rounds, 25 iterations, 3 runs, 5 embeddings\n\n")
+            f.write("This analysis compares three PPO reward function configurations (C10):\n")
+            f.write("1. PPO_NU_R3_I25_RPI100K_C10: Net Utility (VPC * click) - price_paid\n")
+            f.write("2. PPO_GU_R3_I25_RPI100K_C10: Gross Utility VPC * click\n")
+            f.write("3. PPO_PWS_R3_I25_RPI100K_C10: Penalty for Wasted Spend\n")
+            f.write("All experiments: 100K rounds, 25 iterations, 3 runs, 10 competitors\n\n")
             
             f.write("SUMMARY METRICS:\n")
             f.write("-" * 20 + "\n")
@@ -573,7 +573,7 @@ class RewardFunctionAnalyzer:
         
         # Create DataFrame and save
         summary_df = pd.DataFrame(table_data)
-        summary_path = self.results_dir / 'ppo_reward_functions_summary_table.csv'
+        summary_path = self.results_dir / 'ppo_reward_functions_c10_summary_table.csv'
         summary_df.to_csv(summary_path, index=False)
         
         print("Summary Table:")
@@ -585,7 +585,7 @@ class RewardFunctionAnalyzer:
 
 def main():
     """Main analysis execution"""
-    print("Starting Comprehensive PPO Reward Functions Analysis")
+    print("Starting Comprehensive PPO Reward Functions Analysis (C10)")
     print("=" * 60)
     
     # Initialize analyzer
@@ -606,13 +606,11 @@ def main():
     
     print("\nAnalysis completed successfully!")
     print("Generated outputs:")
-    print("- ppo_reward_functions_comprehensive_analysis.pdf")
-    print("- ppo_reward_functions_comprehensive_analysis.png")
-    print("- ppo_reward_functions_analysis_report.txt")
-    print("- ppo_reward_functions_summary_table.csv")
-    print("- reward_functions_comprehensive_analysis.png") 
-    print("- reward_functions_analysis_report.txt")
-    print("- reward_functions_summary_table.csv")
+    print("- ppo_reward_functions_c10_comprehensive_analysis.pdf")
+    print("- ppo_reward_functions_c10_comprehensive_analysis.png")
+    print("- ppo_reward_functions_c10_analysis_report.txt")
+    print("- ppo_reward_functions_c10_summary_table.csv")
+
 
 if __name__ == "__main__":
     main()
